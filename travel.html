@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel | Devansh Shah</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS for interactive map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #travel-map { width: 100%; height: 400px; margin-bottom: 2rem; border-radius: 10px; }
+    .travel-list ul { margin-left: 1.5rem; }
+    .travel-list li { margin-bottom: 0.5rem; }
+    .travel-list details { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Devansh Shah</div>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="cooking.html">Cooking</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+    <section class="hero">
+      <h1>Travel Itineraries</h1>
+      <p>Explore my journeys across the world, with detailed itineraries and highlights.</p>
+    </section>
+  </header>
 
+  <main>
+    <!-- Interactive Map -->
+    <div id="travel-map"></div>
+
+    <section class="travel-list">
+      <h2>My Itineraries</h2>
+      <ul>
+        <li><a href="travel/vietnam.html">Vietnam</a></li>
+        <li>
+          <details>
+            <summary><strong>USA</strong></summary>
+            <ul>
+              <li><a href="travel/usa/california.html">California Adventure</a></li>
+              <li><a href="travel/usa/newyork.html">New York & East Coast</a></li>
+              <!-- Add more USA itineraries as needed -->
+            </ul>
+          </details>
+        </li>
+        <li><a href="travel/spain.html">Spain</a></li>
+        <li><a href="travel/japan.html">Japan</a></li>
+        <li>
+          <details>
+            <summary><strong>India</strong></summary>
+            <ul>
+              <li><a href="travel/india/rajasthan.html">Rajasthan Circuit</a></li>
+              <li><a href="travel/india/himalayas.html">Himalayan Trek</a></li>
+              <!-- Add more India itineraries as needed -->
+            </ul>
+          </details>
+        </li>
+        <li><a href="travel/egypt.html">Egypt</a></li>
+        <li><a href="travel/eastern-europe.html">Eastern Europe</a></li>
+        <li>
+          <details>
+            <summary><strong>Central Asia</strong></summary>
+            <ul>
+              <li><a href="travel/centralasia/uzbekistan.html">Uzbekistan</a></li>
+              <li><a href="travel/centralasia/kazakhstan.html">Kazakhstan</a></li>
+              <!-- Add more Central Asia itineraries as needed -->
+            </ul>
+          </details>
+        </li>
+        <li><a href="travel/malaysian-borneo.html">Malaysian Borneo</a></li>
+        <li><a href="travel/bali.html">Bali</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:shah.16@iitj.ac.in" aria-label="Email">
+        <img src="assets/icons/email.svg" alt="Email Icon">
+      </a>
+      <a href="https://www.linkedin.com/in/devansh-shah-3467b1150/" target="_blank" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn Icon">
+      </a>
+      <a href="https://github.com/devansh-shah56" target="_blank" aria-label="GitHub">
+        <img src="assets/icons/github.svg" alt="GitHub Icon">
+      </a>
+    </div>
+    <p>&copy; 2025 Devansh Shah. All rights reserved.</p>
+  </footer>
+  <script src="theme-toggle.js" defer></script>
+  <!-- Leaflet JS for interactive map -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Coordinates for your destinations (example coordinates, replace with your actual places)
+    const places = [
+      { name: "Vietnam", coords: [14.0583, 108.2772] },
+      { name: "California, USA", coords: [36.7783, -119.4179] },
+      { name: "New York, USA", coords: [40.7128, -74.0060] },
+      { name: "Spain", coords: [40.4637, -3.7492] },
+      { name: "Japan", coords: [36.2048, 138.2529] },
+      { name: "Rajasthan, India", coords: [27.0238, 74.2179] },
+      { name: "Himalayas, India", coords: [32.2432, 77.1892] },
+      { name: "Egypt", coords: [26.8206, 30.8025] },
+      { name: "Eastern Europe", coords: [47.1625, 19.5033] },
+      { name: "Uzbekistan", coords: [41.3775, 64.5853] },
+      { name: "Kazakhstan", coords: [48.0196, 66.9237] },
+      { name: "Malaysian Borneo", coords: [4.2105, 114.2286] },
+      { name: "Bali", coords: [-8.3405, 115.0920] }
+    ];
+
+    var map = L.map('travel-map').setView([20, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    places.forEach(function(place) {
+      L.marker(place.coords).addTo(map)
+        .bindPopup(place.name);
+    });
+  </script>
+</body>
+</html>

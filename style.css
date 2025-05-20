@@ -140,3 +140,39 @@ footer {
     gap: 1rem;
   }
 }
+
+body.dark {
+  background: #181a1b;
+  color: #f5f7fa;
+}
+body.dark main {
+  background: #23272f;
+  color: #f5f7fa;
+}
+body.dark header {
+  background: linear-gradient(120deg, #23272f 0%, #4e54c8 100%);
+  color: #fff;
+}
+body.dark h2 {
+  color: #ffd700;
+  border-bottom: 2px solid #444;
+}
+body.dark .region {
+  background: #23272f;
+  color: #f5f7fa;
+}
+body.dark nav a {
+  color: #ffd700;
+}
+body.dark nav a:hover {
+  color: #fff;
+}
+body.dark footer {
+  background: #23272f;
+  color: #ffd700;
+}
+body.dark .hero p {
+  color: #ffd700;
+}
+
+

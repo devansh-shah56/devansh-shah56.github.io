@@ -208,3 +208,67 @@ body.dark .hero p {
 body.dark #theme-toggle {
   color: #ffd700;
 }
+
+/* Education section layout */
+#education {
+  margin-top: 2.5rem;
+}
+
+.edu-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1.2rem 0;
+  gap: 2rem;
+}
+
+.edu-main h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.edu-detail {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 0.2rem;
+}
+
+.edu-inst {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+.edu-meta {
+  text-align: right;
+  font-size: 0.97rem;
+  color: #333;
+  min-width: 160px;
+}
+
+.edu-meta p {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 700px) {
+  .edu-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .edu-meta {
+    text-align: left;
+    min-width: unset;
+  }
+}
+body.dark .edu-entry {
+  border-bottom: 1px solid #444;
+}
+body.dark .edu-detail,
+body.dark .edu-inst,
+body.dark .edu-meta {
+  color: #ccc;
+}
+

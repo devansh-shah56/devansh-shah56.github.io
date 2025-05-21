@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vietnam Travel Blog | Devansh Shah</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .vietnam-hero {
+      background: linear-gradient(135deg, #b7e5d2 0%, #e0c3fc 100%);
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .itinerary {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2rem;
+    }
+    .city-section {
+      margin-bottom: 2rem;
+    }
+    .city-section h2 {
+      color: #008080;
+      margin-bottom: 0.5rem;
+    }
+    .highlight {
+      background: #ffe066;
+      padding: 0.1em 0.5em;
+      border-radius: 5px;
+    }
+    .places-list {
+      list-style: disc inside;
+      margin: 0.5rem 0 1rem 1rem;
+    }
+    .photo-strip {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+    .photo-strip img {
+      border-radius: 8px;
+      height: 80px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    @media (max-width: 600px) {
+      .photo-strip img {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Devansh Shah</div>
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../education.html">Education</a></li>
+        <li><a href="../experiences.html">Experiences</a></li>
+        <li><a href="../travel.html">Travel</a></li>
+        <li><a href="../books.html">Books</a></li>
+        <li><a href="../cooking.html">Cooking</a></li>
+        <li><a href="../photos.html">Photos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="vietnam-hero">
+      <h1>Vietnam Adventure</h1>
+      <p>
+        From bustling cities to peaceful rice fields, ancient tombs to lantern-lit nights—Vietnam swept me off my feet! Here’s a quick, colorful look at my journey across this amazing country.
+      </p>
+      <div class="photo-strip">
+        <img src="../assets/vietnam/hoian-lanterns.jpg" alt="Hoi An lanterns">
+        <img src="../assets/vietnam/halong-bay.jpg" alt="Halong Bay">
+        <img src="../assets/vietnam/ninh-binh.jpg" alt="Ninh Binh">
+        <img src="../assets/vietnam/hanoi-trainstreet.jpg" alt="Hanoi Train Street">
+      </div>
+    </section>
+
+    <section class="itinerary">
+      <h2 style="color:#008080;">My 11-Day Vietnam Itinerary</h2>
+      <ul>
+        <li><span class="highlight">Day 1-2:</span> Ho Chi Minh City & Mekong Delta</li>
+        <li><span class="highlight">Day 3-4:</span> Hue (via Da Nang & Hai Van Pass)</li>
+        <li><span class="highlight">Day 5-7:</span> Hoi An & Ba Na Hills</li>
+        <li><span class="highlight">Day 8:</span> Hanoi & Old Quarter</li>
+        <li><span class="highlight">Day 9:</span> Halong Bay Cruise</li>
+        <li><span class="highlight">Day 10-11:</span> Ninh Binh & Trang An</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Ho Chi Minh City (Saigon)</h2>
+      <ul class="places-list">
+        <li>Walked through French colonial streets and lively markets</li>
+        <li>Crawled inside the <b>Cu Chi Tunnels</b>—an underground maze from the Vietnam War</li>
+        <li>Sampled street food and soaked in the nightlife at Phạm Ngũ Lão Street</li>
+        <li>Explored the <b>Mekong Delta</b> on a day tour—boats, coconut candy, and floating markets!</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Hue</h2>
+      <ul class="places-list">
+        <li>Marvelled at the grand <b>Imperial City</b> and ancient citadel walls</li>
+        <li>Visited colorful <b>Royal Tombs</b> (Tu Duc, Khai Dinh, Minh Mang)</li>
+        <li>Cruised along the Perfume River at sunset</li>
+        <li>Strolled through peaceful pagodas and gardens</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Da Nang & Ba Na Hills</h2>
+      <ul class="places-list">
+        <li>Chilled on the white sands of <b>My Khe Beach</b></li>
+        <li>Stared up at the giant <b>Lady Buddha</b></li>
+        <li>Climbed the <b>Marble Mountains</b> for epic views</li>
+        <li>Walked the famous <b>Golden Bridge</b>—those giant stone hands are wild!</li>
+        <li>Rode a cable car above the clouds to the French Village</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Hoi An</h2>
+      <ul class="places-list">
+        <li>Wandered the magical <b>lantern-lit streets</b> of the Old Town</li>
+        <li>Snapped photos at the <b>Japanese Covered Bridge</b></li>
+        <li>Explored quirky assembly halls and temples</li>
+        <li>Pedaled through lush rice paddies to <b>An Bang Beach</b></li>
+        <li>Floated down the Thu Bon River in a lantern boat</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Hanoi</h2>
+      <ul class="places-list">
+        <li>Got lost in the bustling <b>Old Quarter</b></li>
+        <li>Chilled by <b>Hoan Kiem Lake</b> and visited Ngoc Son Temple</li>
+        <li>Watched the train zoom past at the famous <b>Train Street</b></li>
+        <li>Sampled egg coffee and street treats at the night market</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Halong Bay</h2>
+      <ul class="places-list">
+        <li>Sailed between limestone islands on a dreamy overnight cruise</li>
+        <li>Kayaked, swam, and watched sunrise from the deck</li>
+      </ul>
+    </section>
+
+    <section class="city-section">
+      <h2>Ninh Binh</h2>
+      <ul class="places-list">
+        <li>Took a paddle boat through <b>Trang An</b>’s magical caves and rivers</li>
+        <li>Climbed 500 steps for the epic <b>Mua Cave viewpoint</b></li>
+        <li>Explored hidden temples at <b>Bich Dong Pagoda</b></li>
+        <li>Visited the vast <b>Bai Dinh Pagoda</b> and ancient capital of <b>Hoa Lu</b></li>
+      </ul>
+    </section>
+
+    <section style="text-align:center; margin-top:2rem;">
+      <p style="font-size:1.1em;">
+        <span class="highlight">Vietnam surprised me at every turn—mountains, rivers, lanterns, and the friendliest people. Can’t wait to go back!</span>
+      </p>
+    </section>
+
+    <section style="text-align:center; margin-top:2rem;">
+      <a href="../travel.html" style="color:teal; text-decoration:underline;">&larr; Back to Travel</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:shah.16@iitj.ac.in" aria-label="Email">
+        <img src="../assets/icons/email.svg" alt="Email Icon">
+      </a>
+      <a href="https://www.linkedin.com/in/devansh-shah-3467b1150/" target="_blank" aria-label="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn Icon">
+      </a>
+      <a href="https://github.com/devansh-shah56" target="_blank" aria-label="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub Icon">
+      </a>
+    </div>
+    <p>&copy; 2025 Devansh Shah. All rights reserved.</p>
+  </footer>
+  <script src="../theme-toggle.js" defer></script>
+</body>
+</html>

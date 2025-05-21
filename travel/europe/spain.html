@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spain Travel Guide | Devansh Shah</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: var(--background, #f9f9f9);
+      color: var(--text, #222);
+      transition: background 0.3s, color 0.3s;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        --background: #18191a;
+        --text: #f3f3f3;
+      }
+      .spain-hero, .itinerary, .section, .tips-section {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      }
+      .highlight {
+        background: #ffe066;
+        color: #222;
+      }
+      .info-card {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+      }
+    }
+    .spain-hero {
+      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #222;
+    }
+    .itinerary, .section, .tips-section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .section h2 {
+      color: #b22222;
+      margin-bottom: 0.5rem;
+    }
+    .highlight {
+      background: #ffe066;
+      color: #222;
+      padding: 0.1em 0.5em;
+      border-radius: 5px;
+      font-weight: 500;
+      margin-right: 0.5em;
+    }
+    .places-list {
+      list-style: disc inside;
+      margin: 0.5rem 0 1rem 1rem;
+    }
+    .info-card {
+      background: #f6f8fa;
+      border-left: 4px solid #b22222;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .section-divider {
+      border: none;
+      border-top: 2px solid #ff4e50;
+      margin: 2rem 0;
+    }
+    a {
+      color: #b22222;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .spain-hero, .itinerary, .section, .tips-section {
+        padding: 1rem 0.5rem;
+      }
+    }
+    /* Image strip for future use
+    .photo-strip {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+    .photo-strip img {
+      border-radius: 8px;
+      height: 80px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    */
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Devansh Shah</div>
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../education.html">Education</a></li>
+        <li><a href="../experiences.html">Experiences</a></li>
+        <li><a href="../travel.html">Travel</a></li>
+        <li><a href="../books.html">Books</a></li>
+        <li><a href="../cooking.html">Cooking</a></li>
+        <li><a href="../photos.html">Photos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="spain-hero">
+      <h1>Spain: The Ultimate Road Trip</h1>
+      <p>
+        From vibrant cities and Moorish palaces to sun-soaked beaches and whitewashed mountain villages, Spain dazzles at every turn. Here’s your one-stop guide to exploring the best of Spain—what to see, where to go, and how to make the most of every stop!
+      </p>
+      <!--
+      <div class="photo-strip">
+        <!-- Add your Spain adventure photos here in the future! -->
+      </div>
+      -->
+    </section>
+
+    <section class="itinerary">
+      <h2 style="color:#b22222;">Our Detailed Spain Itinerary</h2>
+      <ul>
+        <li><span class="highlight">Day 1-2:</span> Barcelona – Las Ramblas, Gothic Quarter, Port Vell, Sagrada Familia, Park Güell, Montjuïc</li>
+        <li><span class="highlight">Day 3:</span> Montserrat Monastery, drive to Valencia via Tarragona</li>
+        <li><span class="highlight">Day 4:</span> Valencia – Mercado Central, Silk Exchange, Cathedral, Jardín del Turia, Oceanogràfic</li>
+        <li><span class="highlight">Day 5:</span> Scenic drive to Granada via Sierra Nevada</li>
+        <li><span class="highlight">Day 6-7:</span> Granada – Alhambra, Old Town, Cathedral, Albayzín, Mirador de San Nicholas</li>
+        <li><span class="highlight">Day 8:</span> Granada to Malaga, explore Malaga and Benahavis</li>
+        <li><span class="highlight">Day 9:</span> Costa del Sol drive – Nerja, Marbella, Puerto Banus, Benahavis</li>
+        <li><span class="highlight">Day 10:</span> Estepona, Casares, Ronda</li>
+        <li><span class="highlight">Day 11:</span> Gibraltar, Cadiz, Seville</li>
+        <li><span class="highlight">Day 12:</span> Seville – Plaza de España, Alcazar, Cathedral, Giralda</li>
+        <li><span class="highlight">Day 13:</span> Cordoba – Mezquita, Jewish Quarter, museums</li>
+        <li><span class="highlight">Day 14:</span> Seville – last day, shopping, river views, local markets</li>
+        <li><span class="highlight">Day 15:</span> Toledo – Cathedral, Alcázar, Santa María La Blanca</li>
+        <li><span class="highlight">Day 16-17:</span> Madrid – Prado, Reina Sofía, Royal Palace, Retiro Park, Plaza Mayor, Bernabéu Stadium, Debod Temple</li>
+      </ul>
+    </section>
+
+    <section class="tips-section info-card">
+      <h2 style="color:#b22222;">Spain Travel Tips</h2>
+      <ul>
+        <li><b>Best Time to Visit:</b> Spring (April–May) and Autumn (September–October) for mild weather. Avoid the week before Easter unless you want to see Semana Santa processions.</li>
+        <li><b>Transport:</b> Trains and buses connect major cities. Car rental is affordable and best for exploring smaller towns and countryside. Use Autovias (free highways) to save on tolls.</li>
+        <li><b>Accommodation:</b> Self-catering apartments are budget-friendly. Book ahead in major cities and during festivals.</li>
+        <li><b>Food:</b> Try local specialties: paella in Valencia, tapas in Granada and Seville, seafood on the coast. Dinner is late—restaurants fill up after 8:30pm.</li>
+        <li><b>Tickets:</b> Book Alhambra and Dali Museum tickets in advance. Use the same credit card for collection at ticket machines.</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section">
+      <h2>Barcelona</h2>
+      <ul class="places-list">
+        <li><b>Las Ramblas & Gothic Quarter:</b> The lively heart of Barcelona, filled with street artists, human statues, and bustling markets. Wander the narrow lanes of the Gothic Quarter for medieval charm and visit the peaceful Barcelona Cathedral.</li>
+        <li><b>Port Vell & La Barceloneta:</b> Stroll the marina, visit the Museu d'Història de Catalunya, and enjoy fresh seafood in Barceloneta’s tapas bars.</li>
+        <li><b>Gaudi’s Masterpieces:</b> Marvel at Casa Milà (La Pedrera) and the world-famous Sagrada Familia—don’t miss the intricate facades and stunning interior. Relax in the whimsical Park Güell, with its colorful mosaics and city views.</li>
+        <li><b>Montjuïc:</b> Take in panoramic city views, Olympic monuments, and the Magic Fountain’s evening light and water shows (Thu–Sun, check schedule).</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Use the metro or walk—driving and parking in Barcelona is tricky. Book Sagrada Familia and Park Güell tickets in advance.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Montserrat & Tarragona</h2>
+      <ul class="places-list">
+        <li><b>Montserrat Monastery:</b> A breathtaking Benedictine monastery perched atop a mountain. Take the mountain train for the best views and explore the basilica and relics.</li>
+        <li><b>Tarragona:</b> Stop for lunch in this ancient city with Roman ruins, a charming old town, and excellent restaurants. Great for a break on the drive to Valencia.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Valencia</h2>
+      <ul class="places-list">
+        <li><b>Mercado Central:</b> Start your day with churros and coffee, then browse this lively market for local ham, cheese, and picnic treats.</li>
+        <li><b>Lonja de la Seda (Silk Exchange):</b> Admire the Gothic architecture of this UNESCO World Heritage site—entry is free!</li>
+        <li><b>Valencia Cathedral:</b> Seek out the Holy Grail and climb the 205 steps of the Miguelete tower for city views.</li>
+        <li><b>Jardín del Turia:</b> Stroll or picnic in this vast green park, a former riverbed encircling the old town.</li>
+        <li><b>City of Arts and Sciences & Oceanogràfic:</b> Explore futuristic architecture and one of Europe’s best aquariums. Don’t miss the underwater tunnel and dolphin shows.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Valencia is less touristy than Barcelona or Granada—enjoy the relaxed vibe and authentic food.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Granada</h2>
+      <ul class="places-list">
+        <li><b>Alhambra:</b> Spain’s most iconic Moorish palace complex—book tickets far in advance! Explore Nasrid Palaces, Generalife Gardens, and the Alcazaba fortress. Allow plenty of time and arrive early for your slot.</li>
+        <li><b>Old Town & Cathedral:</b> Wander the medieval streets, visit the grand Cathedral and Capilla Real, and browse the spice stalls for local flavors.</li>
+        <li><b>Albayzín & Mirador de San Nicholas:</b> Lose yourself in the maze of whitewashed lanes, artisan shops, and panoramic views of the Alhambra and Sierra Nevada mountains.</li>
+        <li><b>Local Cuisine:</b> Try tapas on Calle Navas or sample fritto misto (fried seafood) in the plazas.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> The Alhambra is hilly—wear good shoes and bring water. Don’t miss the sunset from Mirador de San Nicholas.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Andalusia Coast: Malaga, Benahavis, Nerja, Marbella, Puerto Banus</h2>
+      <ul class="places-list">
+        <li><b>Malaga:</b> Visit the Alcazaba (Moorish fort), Castillo de Gibralfaro for city views, and the lively marina. Enjoy lunch in the Old Town or by the sea.</li>
+        <li><b>Benahavis:</b> A tranquil mountain village known as the culinary capital of the Costa del Sol. Ideal for relaxing evenings and gourmet dinners.</li>
+        <li><b>Nerja:</b> Explore prehistoric caves, stroll the charming old town, and take in the views from Balcon de Europa.</li>
+        <li><b>Marbella:</b> Wander the cobbled streets of the Old Town and enjoy a beachside lunch.</li>
+        <li><b>Puerto Banus:</b> See luxury yachts and supercars, then relax on the nearby beaches.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> The coastal A-7 is scenic and free—stop at miradors (viewpoints) for the best photos.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Casares & Ronda</h2>
+      <ul class="places-list">
+        <li><b>Casares:</b> A dazzling white village perched on a mountain. Hike up to the old fort and cliffside viewing platform for falcon-spotting and epic panoramas.</li>
+        <li><b>Ronda:</b> Famous for the Puente Nuevo bridge spanning a dramatic gorge, Spain’s oldest bullring, and cliffside restaurants with unforgettable views.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Gibraltar & Cadiz</h2>
+      <ul class="places-list">
+        <li><b>Gibraltar:</b> Cross into this British territory for a unique blend of cultures. Take the cable car up the Rock for views and visit the Moorish castle and tunnels. Watch out for cheeky monkeys!</li>
+        <li><b>Cadiz:</b> Europe’s oldest city, set on a narrow peninsula. Climb the cathedral tower for sweeping views, stroll the Old Town, and walk out to Santa Catalina castle along the sea.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Seville</h2>
+      <ul class="places-list">
+        <li><b>Plaza de España:</b> A grand semicircular square with tiled alcoves representing every Spanish province. Located in the lush Parque de María Luisa.</li>
+        <li><b>Alcazar:</b> A stunning palace blending Moorish and Christian styles, with lush gardens and ornate courtyards.</li>
+        <li><b>Seville Cathedral & Giralda:</b> The third-largest church in the world, with a converted minaret tower offering the best city views.</li>
+        <li><b>Food & Nightlife:</b> Try black squid paella, tapas on Calle Mesón del Moro, or treat yourself to fine dining at Eslava or Az-Zait.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Book Alcazar tickets ahead. For shopping and local markets, explore Calle San Pablo and the area around Puente de Isabel II.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Cordoba</h2>
+      <ul class="places-list">
+        <li><b>Mezquita:</b> An extraordinary mosque-cathedral blending Islamic and Christian architecture. Book tickets in advance and allow time to wander the vast interior.</li>
+        <li><b>Jewish Quarter:</b> Whitewashed lanes, flower-filled patios, and the Casa de Sefarad museum.</li>
+        <li><b>History & Museums:</b> Cordoba was once Europe’s largest city and Spain’s capital under the Romans. Explore archaeological and cultural museums, and visit the ancient Roman bridge.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Cordoba is hottest in summer—visit early or late in the day. The city’s patios are especially beautiful in May.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Toledo</h2>
+      <ul class="places-list">
+        <li><b>Cathedral:</b> A Gothic masterpiece packed with art—don’t miss the sacristy’s collection of El Greco, Goya, and more.</li>
+        <li><b>Alcázar:</b> The historic fortress-palace of Castilian kings.</li>
+        <li><b>Santa María La Blanca:</b> A unique synagogue-turned-church with Moorish arches and white pillars.</li>
+        <li><b>City Views:</b> Walk the ring road or visit viewpoints for stunning panoramas of the city and river.</li>
+        <li><b>Sword-Making Heritage:</b> Toledo is famed for its swords—see real movie props and shop for unique souvenirs.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Madrid</h2>
+      <ul class="places-list">
+        <li><b>Prado Museum:</b> World-class collection of Spanish, Italian, and Flemish art—Velázquez, Goya, El Greco, Bosch, and more.</li>
+        <li><b>Reina Sofía Museum:</b> Picasso’s Guernica and modern masters like Dalí and Miró.</li>
+        <li><b>Royal Palace:</b> Opulent 18th-century palace with gardens and the Royal Armoury.</li>
+        <li><b>Retiro Park:</b> Madrid’s main green space—boating lake, cafés, and Sunday strolls.</li>
+        <li><b>Plaza Mayor & Los Austrias:</b> Historic squares and tapas bars in the old city.</li>
+        <li><b>Bernabéu Stadium:</b> Tour Real Madrid’s legendary home.</li>
+        <li><b>Debod Temple:</b> An ancient Egyptian temple gifted to Spain—perfect for sunset views.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Madrid’s museums are world-class—buy tickets online to skip lines. Use the metro for easy city travel.
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="tips-section">
+      <h2 style="color:#b22222;">Essential Spain Experiences</h2>
+      <ul>
+        <li>Book Alhambra and Mezquita tickets well in advance.</li>
+        <li>Try tapas in every city—each region has its own specialties.</li>
+        <li>Enjoy late-night dinners and vibrant plazas after dark.</li>
+        <li>Visit local markets for authentic food and souvenirs.</li>
+        <li>Take scenic drives through Andalusia’s white villages and mountain roads.</li>
+        <li>Relax on Mediterranean beaches or hike in the Sierra Nevada.</li>
+      </ul>
+    </section>
+
+    <section style="text-align:center; margin-top:2rem;">
+      <a href="../travel.html" style="color:#b22222; text-decoration:underline;">&larr; Back to Travel</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:shah.16@iitj.ac.in" aria-label="Email">
+        <img src="../assets/icons/email.svg" alt="Email Icon">
+      </a>
+      <a href="https://www.linkedin.com/in/devansh-shah-3467b1150/" target="_blank" aria-label="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn Icon">
+      </a>
+      <a href="https://github.com/devansh-shah56" target="_blank" aria-label="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub Icon">
+      </a>
+    </div>
+    <p>&copy; 2025 Devansh Shah. All rights reserved.</p>
+  </footer>
+  <script src="../theme-toggle.js" defer></script>
+</body>
+</html>

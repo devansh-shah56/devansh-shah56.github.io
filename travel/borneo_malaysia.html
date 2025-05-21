@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sabah, Malaysian Borneo Travel Guide | Devansh Shah</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      background: var(--background, #f9f9f9);
+      color: var(--text, #222);
+      transition: background 0.3s, color 0.3s;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        --background: #18191a;
+        --text: #f3f3f3;
+      }
+      .borneo-hero, .itinerary, .section, .tips-section {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      }
+      .highlight {
+        background: #ffe066;
+        color: #222;
+      }
+      .info-card {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+      }
+    }
+    .borneo-hero {
+      background: linear-gradient(135deg, #b7e5d2 0%, #e0c3fc 100%);
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #222;
+    }
+    .itinerary, .section, .tips-section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .section h2 {
+      color: #008080;
+      margin-bottom: 0.5rem;
+    }
+    .highlight {
+      background: #ffe066;
+      color: #222;
+      padding: 0.1em 0.5em;
+      border-radius: 5px;
+      font-weight: 500;
+      margin-right: 0.5em;
+    }
+    .places-list {
+      list-style: disc inside;
+      margin: 0.5rem 0 1rem 1rem;
+    }
+    .info-card {
+      background: #f6f8fa;
+      border-left: 4px solid #008080;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .section-divider {
+      border: none;
+      border-top: 2px solid #e0c3fc;
+      margin: 2rem 0;
+    }
+    a {
+      color: teal;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .borneo-hero, .itinerary, .section, .tips-section {
+        padding: 1rem 0.5rem;
+      }
+    }
+    /* Image strip for future use
+    .photo-strip {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+    .photo-strip img {
+      border-radius: 8px;
+      height: 80px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    */
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Devansh Shah</div>
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../education.html">Education</a></li>
+        <li><a href="../experiences.html">Experiences</a></li>
+        <li><a href="../travel.html">Travel</a></li>
+        <li><a href="../books.html">Books</a></li>
+        <li><a href="../cooking.html">Cooking</a></li>
+        <li><a href="../photos.html">Photos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="borneo-hero">
+      <h1>Sabah, Malaysian Borneo: The Ultimate Adventure</h1>
+      <p>
+        Malaysian Borneo, especially Sabah, is a paradise for nature lovers, wildlife enthusiasts, and adventure seekers. From climbing misty mountains to diving in turquoise waters and spotting orangutans in the wild, this guide covers everything you need to plan your own epic journey!
+      </p>
+      <!--
+      <div class="photo-strip">
+        <!-- Add your Borneo adventure photos here in the future! -->
+      </div>
+      -->
+    </section>
+
+    <section class="itinerary">
+      <h2 style="color:#008080;">Our 10-Day Borneo & Kuala Lumpur Itinerary</h2>
+      <ul>
+        <li><span class="highlight">Day 1:</span> Arrive in Kota Kinabalu. Visit Floating Mosque, Sabah State Mosque, Filipino Market, KK Waterfront, Times Square, and sunset at Tanjung Aru Beach.</li>
+        <li><span class="highlight">Day 2:</span> Island hopping in Tunku Abdul Rahman Marine Park (Sapi, Manukan, etc). Explore Gaya Street, Signal Hill, Atkinson Clock Tower.</li>
+        <li><span class="highlight">Day 3:</span> Early transfer to Kundasang (Kinabalu Park). Short hikes, waterfalls, Poring Hot Spring, museum or Desa Dairy Farm.</li>
+        <li><span class="highlight">Day 4:</span> Birdwatching in Kinabalu Park. Return to Kota Kinabalu.</li>
+        <li><span class="highlight">Day 5:</span> Fly to Tawau, transfer to Semporna. Check in at dive lodge. Sunset at Bukit Tengkorak (Skull Hill).</li>
+        <li><span class="highlight">Day 6-7:</span> Scuba diving at Mabul & Kapalai (AOWD package, 6 dives).</li>
+        <li><span class="highlight">Day 7:</span> Transfer to Kinabatangan. Evening river cruise, night walk.</li>
+        <li><span class="highlight">Day 8:</span> Kinabatangan: Early morning cruise, jungle trail to Sukau Cave, evening cruise, night walk.</li>
+        <li><span class="highlight">Day 9:</span> Sepilok: Rainforest Discovery Centre, Orangutan and Sun Bear Centres. Fly to Kuala Lumpur. KL sightseeing.</li>
+        <li><span class="highlight">Day 10:</span> Kuala Lumpur: Local sightseeing. Depart for Mumbai.</li>
+      </ul>
+    </section>
+
+    <section class="tips-section info-card">
+      <h2 style="color:#008080;">Sabah & Borneo Travel Tips</h2>
+      <ul>
+        <li><b>Best Time to Visit:</b> March–October for dry weather and best wildlife viewing.</li>
+        <li><b>Transport:</b> Domestic flights connect major towns. Use Grab for city rides. Shared vans and buses for regional travel.</li>
+        <li><b>Currency:</b> Malaysian Ringgit (MYR). Cash is essential in rural areas.</li>
+        <li><b>Food:</b> Try roti canai, teh tarik, and local seafood. Vegetarian options are limited—roti canai and thosai are lifesavers!</li>
+        <li><b>Wildlife:</b> Bring binoculars for birdwatching and wildlife spotting. Early mornings are best for animal activity.</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section">
+      <h2>Kota Kinabalu (KK)</h2>
+      <ul class="places-list">
+        <li><b>Tunku Abdul Rahman Marine Park:</b> Island-hop among five unique islands—Sapi (busy, zipline to Gaya), Manukan (best beaches and facilities), Gaya (largest, jungle hikes, Police Bay), Manutik (smallest, clear water, coral), Sulug (quietest, remote, less ideal for snorkeling). <b>Tip:</b> Go early to avoid crowds. MYR 70 for 3 islands/person.</li>
+        <li><b>Floating City Mosque (Masjid Bandaraya):</b> Stunning mosque surrounded by water, appears to float. Entry fee for photos. Visit outside prayer times and dress modestly.</li>
+        <li><b>Mari Mari Cultural Village:</b> Experience traditional Sabahan tribal life—see traditional homes, customs, performances, and food. A bit touristy but very informative!</li>
+        <li><b>Signal Hill Observatory & Atkinson Clock Tower:</b> Best city and harbor views from Signal Hill (check if open). Atkinson Clock Tower is a historic landmark nearby.</li>
+        <li><b>Gaya Street:</b> Lively street with bars, Chinese and Malay restaurants. Don’t miss Yee Fung Laksa for the best laksa in Malaysia.</li>
+        <li><b>Tanjung Aru Beach:</b> The place for gorgeous sunsets. Popular with locals and tourists alike.</li>
+        <li><b>Tip of Borneo:</b> Northernmost point of Borneo, rocky shoreline, epic sunsets. Kalampunian Beach nearby for a quieter beach day.</li>
+      </ul>
+      <div class="info-card">
+        <b>Café Culture:</b> Try Biru Biru Cafe, Ampersand Specialty Coffee, October Coffee House, Nook Cafe, Woo!, and Tamaha—all walkable in KK city center.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Kundasang & Kinabalu Park</h2>
+      <ul class="places-list">
+        <li><b>Kinabalu Park:</b> Malaysia’s first UNESCO World Heritage Site, home to 4,500+ species of flora and fauna, 1,200 orchids, 326 birds, and 100+ mammals. Six vegetation zones from lowland to subalpine.</li>
+        <li><b>Hiking:</b> Nine trails from easy to challenging. <b>Recommended:</b>
+          <ul>
+            <li><b>Silau-Silau Trail:</b> 3km, flat, connects to other trails, great for casual walks and birdwatching.</li>
+            <li><b>Liwagu Trail:</b> 5.6km, follows the river, longest and most rewarding, fewer crowds.</li>
+            <li><b>Kiau View Trail:</b> 2.3km, scenic views over the park, birdwatching.</li>
+            <li><b>Mempening Trail:</b> 3.4km, flat, connects to Kiau View and Bukit Tupai/Burung viewpoints.</li>
+          </ul>
+        </li>
+        <li><b>Other Attractions:</b> Mount Kinabalu Botanical Garden, Poring Hot Springs, Poring Butterfly Farm, Desa Dairy Farm (see cows and try fresh milk), Sosodikon Hill, Sabah Tea Garden, Kundasang War Memorial, Rafflesia Conservation Center, Canopy Walkway.</li>
+        <li><b>Birdwatching:</b> Kinabalu Park is an Important Bird Area (IBA) with 58 montane species (17 endemic). Look for Bornean Treepie, Chestnut-crested Yuhina, Whitehead’s Broadbill, and more. Best along the road to the Sabah Electricity Board’s Power Station at 1,800m.</li>
+        <li><b>Transport:</b> Shared minivans and buses run from KK to Kundasang (RM 10–20). Takes 1–1.5 hours.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> For a casual hike, start with Silau-Silau Trail. For adventure, try Liwagu Trail. Bring rain gear and watch for leeches!
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Semporna, Mabul & Kapalai (Diving Paradise)</h2>
+      <ul class="places-list">
+        <li><b>Semporna Archipelago:</b> World-class diving and snorkeling. Colorful reefs, turtles, sharks, and incredible marine biodiversity. Base for trips to Sipadan, Mabul, and Kapalai islands.</li>
+        <li><b>Diving:</b> Take an AOWD package for multiple dives. Sipadan is legendary—book well in advance. Mabul and Kapalai are great for macro life and easy diving.</li>
+        <li><b>Bukit Tengkorak (Skull Hill):</b> Challenging climb with four viewing platforms and panoramic views. Not suitable for seniors.</li>
+        <li><b>Bajau Laut (Sea Gypsies):</b> See the unique stilt villages and floating homes of the Bajau Laut people. They are expert divers and fishermen, famous for their freediving skills.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Vegetarian food is limited—stock up in Semporna or bring snacks. Diving packages often include meals.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Kinabatangan River & Sukau</h2>
+      <ul class="places-list">
+        <li><b>Kinabatangan River:</b> Malaysia’s second-longest river, renowned for wildlife. Stay in Bilit or Sukau villages for easy access to river cruises and jungle treks.</li>
+        <li><b>River Cruises:</b> 
+          <ul>
+            <li><b>Morning:</b> Best for birdlife and active wildlife—look for hornbills, monkeys, and reptiles.</li>
+            <li><b>Afternoon:</b> Spot proboscis monkeys, macaques, and more as they gather by the banks.</li>
+            <li><b>Night:</b> Unique chance to see nocturnal animals—tarsiers, slow loris, flying squirrels, owls, crocodiles (bring a torch!).</li>
+          </ul>
+        </li>
+        <li><b>Wildlife:</b> Long-tailed macaques, proboscis monkeys, hornbills, eagles, crocodiles, Bornean gibbons, pygmy elephants, otters, orangutans, and more.</li>
+        <li><b>Sukau Cave & Elephant Trail:</b> 8km round-trip hike through jungle carved by pygmy elephants, ending at a massive cave. Trail is flat but can be muddy—follow ribbons on trees for navigation.</li>
+        <li><b>Kampung Bilit:</b> Visit this traditional Malay village for a cultural experience with the Orang Sungai (River People). Dress conservatively.</li>
+        <li><b>Fireflies:</b> Magical displays at night—just step outside after dark in Sukau.</li>
+      </ul>
+      <div class="info-card">
+        <b>Goal:</b> Spot the Borneo Big Five: orangutan, hornbill, crocodile, proboscis monkey, and elephant!
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Sepilok & Rainforest Discovery</h2>
+      <ul class="places-list">
+        <li><b>Sepilok Orangutan Rehabilitation Centre:</b> World-famous sanctuary for rescued and orphaned orangutans. Feeding times at 10am & 3pm—arrive early for best views. Watch babies play in the nursery!</li>
+        <li><b>Bornean Sun Bear Conservation Centre:</b> See the world’s smallest bears up close. Unique golden chest marks on each bear.</li>
+        <li><b>Rainforest Discovery Centre (RDC):</b> Canopy walkway (350m), walking trails, and paddle boats. Great for birdwatching and learning about rainforest ecology. Trails range from 250m to 5km.</li>
+        <li><b>Hiking:</b> Trails inside the orangutan sanctuary and RDC. Walk quietly to spot birds, insects, and wildlife.</li>
+      </ul>
+      <div class="info-card">
+        <b>Tip:</b> Try both morning and afternoon feeding sessions for best orangutan sightings. Bring water, insect repellent, and a camera!
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Kuala Lumpur (KL)</h2>
+      <ul class="places-list">
+        <li><b>Petronas Towers:</b> Iconic twin towers. Visit the Skybridge (170m) and Observation Deck (360m). Book tickets online to avoid queues. Nighttime fountain shows at KLCC Park.</li>
+        <li><b>Batu Caves:</b> Massive Hindu temple in a limestone cave, 272 steps to the top. Modest dress required. Free entry.</li>
+        <li><b>Lake Gardens (Perdana Botanical Gardens):</b> Beautiful park with lakes, flower gardens, deer park, and more. Great for a stroll and to escape the city heat.</li>
+        <li><b>Merdeka Square:</b> Historic green square surrounded by colonial buildings. See Sultan Abdul Samad Building, KL City Gallery, and St. Mary’s Cathedral.</li>
+        <li><b>Masjid Jamek & River of Life:</b> Striking mosque, great for photos. Combine with a walk along the river and nearby “I Love KL” sign.</li>
+        <li><b>Petaling Street (Chinatown):</b> Covered market for cheap goods, souvenirs, and street food. Bargain hard!</li>
+        <li><b>Sri Maha Mariamman Temple:</b> KL’s oldest Hindu temple, colorful and ornate. Remove shoes before entering.</li>
+        <li><b>Jalan Alor:</b> Food street with every Asian cuisine imaginable. Lively at night—perfect for a food hunt.</li>
+        <li><b>Thean Hou Temple:</b> One of Southeast Asia’s largest Chinese temples, panoramic city views.</li>
+        <li><b>Little India (Brickfields):</b> Great for Indian food and culture, especially in the evenings.</li>
+      </ul>
+      <div class="info-card">
+        <b>Getting Around:</b> KLIA Express train is fastest from airport to city; buses are cheaper. Use LRT/MRT for city travel.
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="tips-section">
+      <h2 style="color:#008080;">Essential Borneo Experiences</h2>
+      <ul>
+        <li>Island-hop and snorkel in Tunku Abdul Rahman Marine Park.</li>
+        <li>Hike rainforest trails and spot rare birds in Kinabalu Park.</li>
+        <li>Scuba dive at Sipadan, Mabul, and Kapalai—some of the world’s best sites.</li>
+        <li>Take morning, afternoon, and night cruises on the Kinabatangan River for maximum wildlife sightings.</li>
+        <li>See orangutans and sun bears at Sepilok. Walk the RDC canopy for a bird’s-eye rainforest view.</li>
+        <li>Try local food—laksa, seafood, roti canai, and teh tarik.</li>
+        <li>Explore KL’s temples, markets, and gardens for a taste of Malaysia’s multicultural heart.</li>
+      </ul>
+    </section>
+
+    <section style="text-align:center; margin-top:2rem;">
+      <a href="../travel.html" style="color:teal; text-decoration:underline;">&larr; Back to Travel</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:shah.16@iitj.ac.in" aria-label="Email">
+        <img src="../assets/icons/email.svg" alt="Email Icon">
+      </a>
+      <a href="https://www.linkedin.com/in/devansh-shah-3467b1150/" target="_blank" aria-label="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn Icon">
+      </a>
+      <a href="https://github.com/devansh-shah56" target="_blank" aria-label="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub Icon">
+      </a>
+    </div>
+    <p>&copy; 2025 Devansh Shah. All rights reserved.</p>
+  </footer>
+  <script src="../theme-toggle.js" defer></script>
+</body>
+</html>

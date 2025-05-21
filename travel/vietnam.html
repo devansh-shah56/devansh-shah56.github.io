@@ -3,24 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vietnam Travel Blog | Devansh Shah</title>
+  <title>Vietnam Travel Guide | Devansh Shah</title>
   <link rel="stylesheet" href="../style.css">
   <style>
+    body {
+      background: var(--background, #f9f9f9);
+      color: var(--text, #222);
+      transition: background 0.3s, color 0.3s;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        --background: #18191a;
+        --text: #f3f3f3;
+      }
+      .vietnam-hero, .itinerary, .city-section, .tips-section {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      }
+      .highlight {
+        background: #ffe066;
+        color: #222;
+      }
+      .info-card {
+        background: #23272f !important;
+        color: #f3f3f3 !important;
+      }
+    }
     .vietnam-hero {
       background: linear-gradient(135deg, #b7e5d2 0%, #e0c3fc 100%);
       border-radius: 12px;
       padding: 2rem 1rem;
       margin-bottom: 2rem;
       text-align: center;
+      color: #222;
     }
-    .itinerary {
-      background: #f9f9f9;
+    .itinerary, .city-section, .tips-section {
+      background: #fff;
       border-radius: 10px;
       padding: 1.5rem 1rem;
       margin-bottom: 2rem;
-    }
-    .city-section {
-      margin-bottom: 2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
     .city-section h2 {
       color: #008080;
@@ -28,13 +51,39 @@
     }
     .highlight {
       background: #ffe066;
+      color: #222;
       padding: 0.1em 0.5em;
       border-radius: 5px;
+      font-weight: 500;
+      margin-right: 0.5em;
     }
     .places-list {
       list-style: disc inside;
       margin: 0.5rem 0 1rem 1rem;
     }
+    .info-card {
+      background: #f6f8fa;
+      border-left: 4px solid #008080;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .section-divider {
+      border: none;
+      border-top: 2px solid #e0c3fc;
+      margin: 2rem 0;
+    }
+    a {
+      color: teal;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .vietnam-hero, .itinerary, .city-section, .tips-section {
+        padding: 1rem 0.5rem;
+      }
+    }
+    /* Commented out image strip for future use
     .photo-strip {
       display: flex;
       gap: 10px;
@@ -47,11 +96,7 @@
       object-fit: cover;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
-    @media (max-width: 600px) {
-      .photo-strip img {
-        height: 50px;
-      }
-    }
+    */
   </style>
 </head>
 <body>
@@ -74,104 +119,162 @@
 
   <main>
     <section class="vietnam-hero">
-      <h1>Vietnam Adventure</h1>
+      <h1>Vietnam: The Complete Adventure</h1>
       <p>
-        From bustling cities to peaceful rice fields, ancient tombs to lantern-lit nights—Vietnam swept me off my feet! Here’s a quick, colorful look at my journey across this amazing country.
+        Vietnam is a land of contrasts—ancient temples, buzzing cities, emerald rice fields, dramatic mountains, and stunning beaches. Here’s my comprehensive guide, packed with everything you need to know to plan your own unforgettable journey!
       </p>
+      <!--
       <div class="photo-strip">
         <img src="../assets/vietnam/hoian-lanterns.jpg" alt="Hoi An lanterns">
         <img src="../assets/vietnam/halong-bay.jpg" alt="Halong Bay">
         <img src="../assets/vietnam/ninh-binh.jpg" alt="Ninh Binh">
         <img src="../assets/vietnam/hanoi-trainstreet.jpg" alt="Hanoi Train Street">
       </div>
+      -->
     </section>
 
     <section class="itinerary">
       <h2 style="color:#008080;">My 11-Day Vietnam Itinerary</h2>
       <ul>
-        <li><span class="highlight">Day 1-2:</span> Ho Chi Minh City & Mekong Delta</li>
-        <li><span class="highlight">Day 3-4:</span> Hue (via Da Nang & Hai Van Pass)</li>
-        <li><span class="highlight">Day 5-7:</span> Hoi An & Ba Na Hills</li>
-        <li><span class="highlight">Day 8:</span> Hanoi & Old Quarter</li>
-        <li><span class="highlight">Day 9:</span> Halong Bay Cruise</li>
-        <li><span class="highlight">Day 10-11:</span> Ninh Binh & Trang An</li>
+        <li><span class="highlight">Day 1:</span> Ho Chi Minh City – Walking tour, Cu Chi Tunnels, nightlife at Phạm Ngũ Lão</li>
+        <li><span class="highlight">Day 2:</span> Mekong Delta – Day tour to My Tho, floating markets, return to Saigon</li>
+        <li><span class="highlight">Day 3:</span> Da Nang & Hai Van Pass – Scenic drive to Hue, Thien Mu Pagoda, Royal Tombs, Perfume River</li>
+        <li><span class="highlight">Day 4:</span> Hue Citadel, Ba Na Hills or Hoi An via Marble Mountains & Lady Buddha</li>
+        <li><span class="highlight">Day 5:</span> Hoi An – Walking tour, cycling to beaches, lantern-lit evenings</li>
+        <li><span class="highlight">Day 6:</span> Ba Na Hills (Golden Bridge, French Village), return to Hoi An</li>
+        <li><span class="highlight">Day 7:</span> Hanoi – Old Quarter walking tour, temples, night market</li>
+        <li><span class="highlight">Day 8:</span> Halong Bay – Overnight cruise</li>
+        <li><span class="highlight">Day 9:</span> Ninh Binh – Bich Dong Pagoda, rice fields</li>
+        <li><span class="highlight">Day 10:</span> Trang An boat tour, Hoa Lu Ancient Capital, Bai Dinh Pagoda</li>
+        <li><span class="highlight">Day 11:</span> Mua Cave viewpoint, return home</li>
       </ul>
     </section>
+
+    <section class="tips-section info-card">
+      <h2 style="color:#008080;">Vietnam Travel Tips</h2>
+      <ul>
+        <li><b>Best Time to Visit:</b> Spring (March–April) and Autumn (September–November) for pleasant weather.</li>
+        <li><b>Transport:</b> Domestic flights, trains, buses, and Grab (ride-hailing). Scooters are popular for local travel.</li>
+        <li><b>Currency:</b> Vietnamese Dong (VND). Cash is king, but cards are accepted in big cities.</li>
+        <li><b>Language:</b> Vietnamese. English is common in tourist areas.</li>
+        <li><b>Food:</b> Don’t miss pho, banh mi, fresh spring rolls, and local coffee!</li>
+      </ul>
+    </section>
+
+    <hr class="section-divider">
 
     <section class="city-section">
       <h2>Ho Chi Minh City (Saigon)</h2>
       <ul class="places-list">
-        <li>Walked through French colonial streets and lively markets</li>
-        <li>Crawled inside the <b>Cu Chi Tunnels</b>—an underground maze from the Vietnam War</li>
-        <li>Sampled street food and soaked in the nightlife at Phạm Ngũ Lão Street</li>
-        <li>Explored the <b>Mekong Delta</b> on a day tour—boats, coconut candy, and floating markets!</li>
+        <li><b>Cu Chi Tunnels:</b> Explore the vast underground network used during the Vietnam War. Take a guided tour to crawl through tunnels and learn about guerrilla tactics.</li>
+        <li><b>War Remnants Museum:</b> A sobering look at the Vietnam War’s impact on the country. Highly recommended for history buffs.</li>
+        <li><b>Notre-Dame Cathedral & Central Post Office:</b> French colonial architecture in the city center.</li>
+        <li><b>Ben Thanh Market:</b> Shop for souvenirs, clothes, and street food. Bargaining is expected.</li>
+        <li><b>Pham Ngu Lao & Bui Vien Street:</b> The backpacker district for nightlife, bars, and people-watching.</li>
+        <li><b>Mekong Delta Day Trip:</b> Book a tour to My Tho or Ben Tre for boat rides, floating markets, and coconut candy workshops. Cai Rang floating market in Can Tho is the largest and most photogenic.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Join a free walking tour in District 1 to cover the main sights and get local insights. Use Grab for easy and cheap city transport.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Hue</h2>
       <ul class="places-list">
-        <li>Marvelled at the grand <b>Imperial City</b> and ancient citadel walls</li>
-        <li>Visited colorful <b>Royal Tombs</b> (Tu Duc, Khai Dinh, Minh Mang)</li>
-        <li>Cruised along the Perfume River at sunset</li>
-        <li>Strolled through peaceful pagodas and gardens</li>
+        <li><b>Imperial City (Citadel):</b> A UNESCO site, this sprawling complex was home to the Nguyen emperors. Combo tickets available for Citadel + tombs.</li>
+        <li><b>Royal Tombs:</b> Don’t miss the Tombs of Tu Duc, Khai Dinh (ornate, dark stonework), and Minh Mang (colorful, set by a lake). Each tomb is unique in style and history.</li>
+        <li><b>Thien Mu Pagoda:</b> Iconic seven-story pagoda overlooking the Perfume River. Combine with a dragon boat ride for a scenic trip.</li>
+        <li><b>Perfume River:</b> Take a sunset boat ride for beautiful city views.</li>
+        <li><b>Getting Around:</b> Rickshaws and bicycles are fun ways to explore the city and riverside.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Buy the combo ticket for the Citadel and tombs to save money. Carry cash for entry fees.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Da Nang & Ba Na Hills</h2>
       <ul class="places-list">
-        <li>Chilled on the white sands of <b>My Khe Beach</b></li>
-        <li>Stared up at the giant <b>Lady Buddha</b></li>
-        <li>Climbed the <b>Marble Mountains</b> for epic views</li>
-        <li>Walked the famous <b>Golden Bridge</b>—those giant stone hands are wild!</li>
-        <li>Rode a cable car above the clouds to the French Village</li>
+        <li><b>My Khe & Non Nuoc Beaches:</b> Long stretches of white sand, perfect for relaxing or water sports.</li>
+        <li><b>Lady Buddha:</b> A giant Buddha statue with panoramic views and beautiful temple grounds.</li>
+        <li><b>Marble Mountains:</b> Five limestone hills with caves, Buddhist shrines, and viewpoints. Entry ~40,000 VND.</li>
+        <li><b>Ba Na Hills & Golden Bridge:</b> Ride the world’s longest cable car to a mountaintop theme park. The Golden Bridge, held by giant stone hands, is a must-see. Explore the French Village, gardens, pagodas, and amusement park rides. Buy tickets online to skip queues.</li>
+        <li><b>Hai Van Pass:</b> One of Vietnam’s most scenic drives—hire a scooter or take a jeep tour for winding mountain and coastal views.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> The Hai Van Pass connects Da Nang and Hue. You can send your luggage by bus and ride a scooter one way for the full experience.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Hoi An</h2>
       <ul class="places-list">
-        <li>Wandered the magical <b>lantern-lit streets</b> of the Old Town</li>
-        <li>Snapped photos at the <b>Japanese Covered Bridge</b></li>
-        <li>Explored quirky assembly halls and temples</li>
-        <li>Pedaled through lush rice paddies to <b>An Bang Beach</b></li>
-        <li>Floated down the Thu Bon River in a lantern boat</li>
+        <li><b>Old Town:</b> Wander lantern-lit streets, see ancient merchant houses, and enjoy riverside cafes. Entry ticket covers several sites.</li>
+        <li><b>Japanese Covered Bridge:</b> The most famous landmark—take a photo or pay to walk across.</li>
+        <li><b>Assembly Halls:</b> Visit the Fujian and Cantonese Assembly Halls for ornate temples and Chinese heritage.</li>
+        <li><b>Ba Mu Temple:</b> Not as famous, but worth visiting for its unique three-gate entrance and peaceful pond.</li>
+        <li><b>Night Market:</b> Open every evening—shop for souvenirs, try street food, and see the town glow with lanterns.</li>
+        <li><b>Cycling:</b> Rent a bike to explore the countryside, rice paddies, and nearby An Bang or Cua Dai beaches. Bai Bien Cua Dai is quieter and less touristy.</li>
+        <li><b>Boat Ride:</b> Float down the Thu Bon River at sunset in a lantern boat for magical views.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Join a free walking tour to cover the main sights. Try local dishes like cao lau and white rose dumplings.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Hanoi</h2>
       <ul class="places-list">
-        <li>Got lost in the bustling <b>Old Quarter</b></li>
-        <li>Chilled by <b>Hoan Kiem Lake</b> and visited Ngoc Son Temple</li>
-        <li>Watched the train zoom past at the famous <b>Train Street</b></li>
-        <li>Sampled egg coffee and street treats at the night market</li>
+        <li><b>Old Quarter:</b> The heart of Hanoi—narrow streets, bustling markets, and endless street food. Don’t miss the weekend night market (Fri–Sun).</li>
+        <li><b>Hoan Kiem Lake & Ngoc Son Temple:</b> A peaceful spot in the city center. Modest dress required for temple entry.</li>
+        <li><b>St. Joseph’s Cathedral:</b> Neo-Gothic church inspired by Notre-Dame in Paris. Beautiful both inside and out.</li>
+        <li><b>Hanoi Train Street:</b> Watch a train squeeze through a narrow residential lane—check timings and arrive early for a good spot.</li>
+        <li><b>Temple of Literature, One Pillar Pagoda, Ho Chi Minh Mausoleum:</b> Iconic landmarks worth a visit.</li>
+        <li><b>Dong Xuan Market:</b> Great for souvenirs and local snacks.</li>
+        <li><b>Water Puppet Show:</b> Unique traditional theater, fun for all ages.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Stay in the Old Quarter for easy access to sights and food. Watch out for pickpockets in busy areas.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Halong Bay</h2>
       <ul class="places-list">
-        <li>Sailed between limestone islands on a dreamy overnight cruise</li>
-        <li>Kayaked, swam, and watched sunrise from the deck</li>
+        <li><b>Overnight Cruise:</b> The best way to see the bay’s limestone karsts and islands. Choose from budget to luxury boats—most include meals, kayaking, and cave visits.</li>
+        <li><b>Cat Ba Island:</b> Stay on the island for hiking, beaches, and a quieter vibe.</li>
+        <li><b>Activities:</b> Kayaking, swimming, exploring caves, and sunrise on deck.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Book cruises in advance (especially in peak season). Bring a light jacket—it can get cool on the water.
+      </div>
     </section>
 
     <section class="city-section">
       <h2>Ninh Binh</h2>
       <ul class="places-list">
-        <li>Took a paddle boat through <b>Trang An</b>’s magical caves and rivers</li>
-        <li>Climbed 500 steps for the epic <b>Mua Cave viewpoint</b></li>
-        <li>Explored hidden temples at <b>Bich Dong Pagoda</b></li>
-        <li>Visited the vast <b>Bai Dinh Pagoda</b> and ancient capital of <b>Hoa Lu</b></li>
+        <li><b>Trang An Boat Tour:</b> Glide through rivers and caves surrounded by karst mountains. Route 2 is the best balance of caves and temples, including a “Kong: Skull Island” filming site. Early morning or late afternoon trips avoid crowds.</li>
+        <li><b>Bich Dong Pagoda:</b> Picturesque bridge and cave temple. Climb up for hidden shrines and sunset views.</li>
+        <li><b>Mua Cave Viewpoint:</b> Climb 500 steps for panoramic views of rice fields and rivers. Ignore aggressive parking touts—park at the official Ecolodge.</li>
+        <li><b>Bai Dinh Pagoda:</b> Vietnam’s largest pagoda complex, with towering statues and temples.</li>
+        <li><b>Hoa Lu Ancient Capital:</b> Explore remnants of Vietnam’s 10th-century capital—triple-arched gate, temples, and pagodas.</li>
       </ul>
+      <div class="info-card">
+        <b>Tip:</b> Stay in Tam Coc or Trang An for easy access to all sites. Rent a scooter or bicycle for local travel.
+      </div>
     </section>
 
-    <section style="text-align:center; margin-top:2rem;">
-      <p style="font-size:1.1em;">
-        <span class="highlight">Vietnam surprised me at every turn—mountains, rivers, lanterns, and the friendliest people. Can’t wait to go back!</span>
-      </p>
+    <hr class="section-divider">
+
+    <section class="tips-section">
+      <h2 style="color:#008080;">Essential Vietnam Experiences</h2>
+      <ul>
+        <li>Take a scooter along the Hai Van Pass for epic coastal views.</li>
+        <li>Eat pho and banh mi from street stalls—Vietnamese food is cheap, fresh, and delicious everywhere.</li>
+        <li>Try Vietnamese coffee—strong, sweet, and often served with condensed milk or egg.</li>
+        <li>Join a free walking tour in any major city for local insights.</li>
+        <li>Book overnight trains or buses for long distances to save time and money.</li>
+      </ul>
     </section>
 
     <section style="text-align:center; margin-top:2rem;">
